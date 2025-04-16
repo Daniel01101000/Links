@@ -44,7 +44,8 @@ const CatEyes = () => {
       <div className="eye right">
         <div className="pupil"></div>
       </div>
-
+      
+      <div className="nose"></div>
       {/* Boca */}
       <div className="mouth"></div>
     </div>

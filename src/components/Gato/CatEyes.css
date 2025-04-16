@@ -9,7 +9,7 @@ body {
   }
   
   .cat {
-    position: absolute;  /* Coloca el gato en la parte inferior derecha */
+    position: absolute; /* No pongas position: relative aquí */
     bottom: 0;
     right: 0;
     width: 200px;
@@ -19,7 +19,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;  /* Esto es importante para que las orejas estén dentro de la cabeza */
   }
   
   .eye {
@@ -41,17 +40,47 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
+  .nose {
+    position: absolute;
+    top: 95px; /* Ajusta según dónde la quieras exactamente */
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 25px solid pink;
+  }
   
   .mouth {
     position: absolute;
-    bottom: 10px;
-    width: 50px;
+    bottom: 20px;
+    width: 40px;
     height: 20px;
+  }
+  
+  .mouth::before,
+  .mouth::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: 3px solid black; /* Sigue siendo grueso pero más proporcional */
     border-radius: 50%;
-    border: 2px solid black;
+    border-left: none;
     border-top: none;
   }
   
+  .mouth::before {
+    right: 0;
+    bottom: 0;
+    transform: rotate(30deg);
+  }
+  
+  .mouth::after {
+    right: 18px; /* Separación ajustada al nuevo tamaño */
+    bottom: 0;
+    transform: rotate(30deg);
+  }
   /* Estilo de las orejas puntiagudas */
   .ear {
     position: absolute;
