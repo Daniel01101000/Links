@@ -1,0 +1,74 @@
+body { 
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    overflow: hidden;
+  }
+  
+  .cat {
+    position: absolute;  /* Coloca el gato en la parte inferior derecha */
+    bottom: 0;
+    right: 0;
+    width: 200px;
+    height: 150px;
+    background-color: #f8d03c;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;  /* Esto es importante para que las orejas estén dentro de la cabeza */
+  }
+  
+  .eye {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    margin: 0 -4px;  /* Aumenta el espacio horizontal entre los ojos */
+  }
+  
+  .pupil {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .mouth {
+    position: absolute;
+    bottom: 10px;
+    width: 50px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid black;
+    border-top: none;
+  }
+  
+  /* Estilo de las orejas puntiagudas */
+  .ear {
+    position: absolute;
+    top: -20px;  /* Ajusta la posición para que las orejas estén sobre la cabeza */
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;  /* Crea el lado izquierdo del triángulo */
+    border-right: 30px solid transparent;  /* Crea el lado derecho del triángulo */
+    border-bottom: 50px solid #f8d03c;  /* El color de la oreja */
+  }
+  
+  .ear.left {
+    left: 10px; /* Coloca la oreja izquierda hacia la izquierda */
+    transform: rotate(-30deg); /* Ajusta la rotación de la oreja izquierda */
+  }
+  
+  .ear.right {
+    right: 10px; /* Coloca la oreja derecha hacia la derecha */
+    transform: rotate(30deg); /* Ajusta la rotación de la oreja derecha */
+  }

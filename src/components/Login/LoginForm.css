@@ -1,0 +1,51 @@
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .input-group {
+    display: flex;
+    gap: 16px; /* Aumenta el espacio entre los inputs */
+    margin-bottom: 16px;
+  }
+  
+  .login-form input {
+    padding: 10px;
+    width: 200px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Resultado */
+  .result {
+    margin-top: 20px;
+    word-break: break-word;
+    color: #333;
+  }
+  
+  /* Estilo burbuja para botón */
+  .button-minimalist {
+    background-color: transparent;
+    color: #333;
+    border: 2px solid #333;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+  margin-bottom: 10px;
+  }
+  
+  .button-minimalist:hover {
+    background-color: #333;
+    color: #fff;
+  }
+
+  .base-url-input {
+    width: 200px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
