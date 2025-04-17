@@ -4,13 +4,13 @@ import './LoginForm.css';
 function LoginForm() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [baseURL, setBaseURL] = useState('https://example.com/login'); // Estado para la URL base
+  const [baseURL, setBaseURL] = useState('http://tecnoactive.net:8080/get.php'); // Estado para la URL base
   const [resultUrl, setResultUrl] = useState('');
 
   const generateURL = () => {
     const encodedUsername = encodeURIComponent(username);
     const encodedPassword = encodeURIComponent(password);
-    const finalURL = `${baseURL}?username=${encodedUsername}&password=${encodedPassword}`;
+    const finalURL = `${baseURL}?username=${encodedUsername}&password=${encodedPassword}&type=m3u_plus`;
     setResultUrl(finalURL);
   };
 
